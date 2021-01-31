@@ -1,3 +1,7 @@
-export default () => {
-    return 123; // Rule 1 of reducers - reducers must never return undefined.
+export default (state =[], action) => {
+    if (action.type === 'FETCH_POSTS') {
+        return action.payload;
+    }
+    
+    return state;
 };
